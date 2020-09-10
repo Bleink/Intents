@@ -22,8 +22,8 @@
         android:layout_gravity="center"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:text="@string/sign_in_to_your_account"
-        android:textSize="20sp"
+        android:text="Sign in to your account"
+        android:textSize="20dp"
         android:textStyle="bold" />
     <Space
         android:layout_width="match_parent"
@@ -31,19 +31,19 @@
 
 
     <TextView
-        android:id="@+id/email"
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/email_address_required"
+        android:text="Email address (required)"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"/>
 
     <EditText
-        android:id="@+id/emailText"
+        android:id="@+id/userName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textAutoCorrect|textCapSentences"
+        android:inputType="textEmailAddress"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/border"/>
@@ -53,15 +53,15 @@
 
 
     <TextView
-        android:id="@+id/password"
+        android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/password_required"
+        android:text="Password (required)"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"/>
 
     <EditText
-        android:id="@+id/passwordText"
+        android:id="@+id/passWord"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -71,32 +71,32 @@
         android:background="@drawable/border"/>
 
     <TextView
-        android:id="@+id/forgot"
+        android:id="@+id/textView4"
         android:layout_width="137dp"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:text="@string/forgot_password"
+        android:text="forgot password?"
         android:autoLink="all"
-        android:onClick="forgotPassword"
         android:clickable="true"
-        android:focusable="true" />
+        android:onClick="composeEmail"/>
     <Space
         android:layout_width="match_parent"
         android:layout_height="40dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/signIn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/sign_in"
+        android:text="Sign In"
         android:background="@color/blue"
         android:textColor="@color/white"
+        android:onClick="signingIn"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:textAllCaps="false"
-        android:onClick="signIn"
+        tools:ignore="OnClick"
         />
     <Space
         android:layout_width="match_parent"
@@ -109,7 +109,7 @@
         android:layout_gravity="center"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:text="@string/don_t_have_an_account"
+        android:text="Don't have an account?"
         android:textStyle="bold" />
 
     <Space
@@ -120,13 +120,11 @@
         android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/create_a_new_account"
+        android:onClick="createAccount"
+        android:text="Create a new account"
         android:textColor="@color/blue"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:textAllCaps="false"
-        android:onClick="newAccount"
         />
-
-
 </LinearLayout>
